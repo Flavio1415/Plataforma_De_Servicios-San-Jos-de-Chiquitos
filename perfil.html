@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoja de Vida Digital - Técnico</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <div class="particles" id="particles"></div>
+
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">⚙️ <span>Chiquitos</span>Técnicos</a>
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Menú">☰</button>
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="perfiles.html">Directorio</a></li>
+                    <li><a href="registro.html">Ofrecer Servicio</a></li>
+                    <li><a href="admin.html">Control Admin</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container" style="margin-top: 2rem;">
+        <a href="perfiles.html" class="profile-back-link">← Volver al Directorio</a>
+
+        <div id="profile-card" class="profile-card" style="display:none;">
+            <div class="profile-header">
+                <img id="worker-img" class="profile-avatar" src="" alt="Foto de perfil">
+                <div class="profile-info">
+                    <h1 id="worker-name">Cargando...</h1>
+                    <h3 id="worker-category"></h3>
+                    <p class="profile-detail">📍 <strong>Barrio / Zona:</strong> <span id="worker-zone"></span></p>
+                    <p class="profile-detail">🕒 <strong>Horarios:</strong> <span id="worker-schedule"></span></p>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="profile-section-title">Descripción del Servicio y Experiencia:</h3>
+                <p id="worker-experience" class="profile-experience"></p>
+            </div>
+
+            <div style="text-align: center;">
+                <a id="worker-whatsapp" href="#" target="_blank" class="profile-whatsapp-btn">
+                    💬 Solicitar Trabajo Vía WhatsApp Directo
+                </a>
+            </div>
+        </div>
+
+        <div id="profile-error" class="glass-panel" style="display: none; text-align: center;">
+            <h2 style="color:var(--text-dark);">Perfil no encontrado</h2>
+            <p style="margin: 1rem 0; color:#475569;">La hoja de vida que buscas no existe o fue eliminada por el administrador.</p>
+            <a href="perfiles.html" class="btn-primary" style="display: inline-block; text-decoration: none;">Volver al Directorio</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Plataforma Web de Intermediación Laboral | San José de Chiquitos</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            renderProfileDetail();
+            createParticles();
+        });
+
+        function toggleMenu() {
+            document.getElementById('main-nav').classList.toggle('open');
+        }
+
+        function createParticles() {
+            const container = document.getElementById('particles');
+            if (!container) return;
+            for (let i = 0; i < 12; i++) {
+                const p = document.createElement('div');
+                p.className = 'particle';
+                p.style.left = Math.random() * 100 + '%';
+                p.style.animationDuration = (8 + Math.random() * 15) + 's';
+                p.style.animationDelay = (Math.random() * 10) + 's';
+                p.style.width = (2 + Math.random() * 4) + 'px';
+                p.style.height = p.style.width;
+                p.style.opacity = 0.15 + Math.random() * 0.3;
+                container.appendChild(p);
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración - Chiquitos Técnicos</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <div class="particles" id="particles"></div>
+
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">⚙️ <span>Chiquitos</span>Técnicos</a>
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Menú">☰</button>
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="perfiles.html">Directorio</a></li>
+                    <li><a href="registro.html">Ofrecer Servicio</a></li>
+                    <li><a href="admin.html" class="active">Control Admin</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2>Panel de Control y Gestión de Hojas de Vida</h2>
+        <p style="color:rgba(248,250,252,0.7); margin-bottom:1.5rem;">Aprueba, gestiona o elimina el registro de los trabajadores en la plataforma.</p>
+
+        <div class="admin-table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Foto</th>
+                        <th>Nombre</th>
+                        <th>Especialidad</th>
+                        <th>Estado</th>
+                        <th style="text-align:center;">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="admin-table-body">
+                    <!-- Se cargan dinámicamente desde JS -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Plataforma Web de Intermediación Laboral | San José de Chiquitos</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            renderAdminTable();
+            createParticles();
+        });
+
+        function toggleMenu() {
+            document.getElementById('main-nav').classList.toggle('open');
+        }
+
+        function createParticles() {
+            const container = document.getElementById('particles');
+            if (!container) return;
+            for (let i = 0; i < 12; i++) {
+                const p = document.createElement('div');
+                p.className = 'particle';
+                p.style.left = Math.random() * 100 + '%';
+                p.style.animationDuration = (8 + Math.random() * 15) + 's';
+                p.style.animationDelay = (Math.random() * 10) + 's';
+                p.style.width = (2 + Math.random() * 4) + 'px';
+                p.style.height = p.style.width;
+                p.style.opacity = 0.15 + Math.random() * 0.3;
+                container.appendChild(p);
+            }
+        }
+    </script>
+</body>
+</html>

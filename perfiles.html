@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Directorio de Técnicos - Chiquitos Técnicos</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <div class="particles" id="particles"></div>
+
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">⚙️ <span>Chiquitos</span>Técnicos</a>
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Menú">☰</button>
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="perfiles.html" class="active">Directorio</a></li>
+                    <li><a href="registro.html">Ofrecer Servicio</a></li>
+                    <li><a href="admin.html">Control Admin</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Marquesina en directorio -->
+    <div class="marquee-container">
+        <div class="marquee-track">
+            <div class="marquee-item"><span class="marquee-icon">🔍</span> Busca por especialidad o nombre <span class="marquee-separator">◆</span></div>
+            <div class="marquee-item"><span class="marquee-icon">✔</span> Todos los perfiles verificados <span class="marquee-separator">◆</span></div>
+            <div class="marquee-item"><span class="marquee-icon">💬</span> Contacto directo por WhatsApp <span class="marquee-separator">◆</span></div>
+            <div class="marquee-item"><span class="marquee-icon">📍</span> Técnicos de San José de Chiquitos <span class="marquee-separator">◆</span></div>
+            <div class="marquee-item"><span class="marquee-icon">⭐</span> Técnicos destacados disponibles <span class="marquee-separator">◆</span></div>
+            <!-- Duplicado -->
+            <div class="marquee-item"><span class="marquee-icon">🔍</span> Busca por especialidad o nombre <span class="marquee-separator">◆</span></div>
+            <div class="marquee-item"><span class="marquee-icon">✔</span> Todos los perfiles verificados <span class="marquee-separator">◆</span></div>
+            <div class="marquee-item"><span class="marquee-icon">💬</span> Contacto directo por WhatsApp <span class="marquee-separator">◆</span></div>
+            <div class="marquee-item"><span class="marquee-icon">📍</span> Técnicos de San José de Chiquitos <span class="marquee-separator">◆</span></div>
+            <div class="marquee-item"><span class="marquee-icon">⭐</span> Técnicos destacados disponibles <span class="marquee-separator">◆</span></div>
+        </div>
+    </div>
+
+    <main class="container">
+        <h2>Directorio de Técnicos y Oficiales</h2>
+        <p style="color:rgba(248,250,252,0.7); margin-bottom:1.5rem;">Filtra por especialidad o busca por nombre para encontrar al profesional ideal.</p>
+
+        <div class="filter-bar">
+            <select id="filter-category" onchange="filterWorkers()">
+                <option value="">Todas las Especialidades</option>
+                <option value="Electricidad">Electricidad</option>
+                <option value="Plomería">Plomería</option>
+                <option value="Carpintería">Carpintería</option>
+                <option value="Gastronomía">Gastronomía</option>
+                <option value="Albañilería">Albañilería</option>
+                <option value="Mecánica">Mecánica</option>
+            </select>
+            <input type="text" id="filter-search" placeholder="Buscar por nombre o zona..." oninput="filterWorkers()">
+        </div>
+
+        <div class="grid-workers" id="all-workers">
+            <!-- Se carga dinámicamente -->
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Plataforma Web de Intermediación Laboral | San José de Chiquitos</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            filterWorkers();
+            createParticles();
+        });
+
+        function toggleMenu() {
+            document.getElementById('main-nav').classList.toggle('open');
+        }
+
+        function createParticles() {
+            const container = document.getElementById('particles');
+            if (!container) return;
+            for (let i = 0; i < 15; i++) {
+                const p = document.createElement('div');
+                p.className = 'particle';
+                p.style.left = Math.random() * 100 + '%';
+                p.style.animationDuration = (8 + Math.random() * 15) + 's';
+                p.style.animationDelay = (Math.random() * 10) + 's';
+                p.style.width = (2 + Math.random() * 4) + 'px';
+                p.style.height = p.style.width;
+                p.style.opacity = 0.15 + Math.random() * 0.3;
+                container.appendChild(p);
+            }
+        }
+    </script>
+</body>
+</html>

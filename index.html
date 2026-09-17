@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bolsa Técnica Chiquitana - San José de Chiquitos</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Partículas decorativas flotantes -->
+    <div class="particles" id="particles"></div>
+
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                ⚙️ <span>Chiquitos</span>Técnicos
+            </a>
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Menú">☰</button>
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="index.html" class="active">Inicio</a></li>
+                    <li><a href="perfiles.html">Directorio</a></li>
+                    <li><a href="registro.html">Ofrecer Servicio</a></li>
+                    <li><a href="admin.html">Control Admin</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===== MARQUESINA PRINCIPAL ===== -->
+    <div class="marquee-container">
+        <div class="marquee-track">
+            <div class="marquee-item">
+                <span class="marquee-icon">⚡</span> Electricistas Certificados
+                <span class="marquee-separator">◆</span>
+            </div>
+            <div class="marquee-item">
+                <span class="marquee-icon">🚰</span> Plomeros de Confianza
+                <span class="marquee-separator">◆</span>
+            </div>
+            <div class="marquee-item">
+                <span class="marquee-icon">🪚</span> Carpintería Artesanal
+                <span class="marquee-separator">◆</span>
+            </div>
+            <div class="marquee-item">
+                <span class="marquee-icon">🍳</span> Gastronomía Regional
+                <span class="marquee-separator">◆</span>
+            </div>
+            <div class="marquee-item">
+                <span class="marquee-icon">🧱</span> Albañilería Profesional
+                <span class="marquee-separator">◆</span>
+            </div>
+            <div class="marquee-item">
+                <span class="marquee-icon">🔧</span> Mecánica Automotriz
+                <span class="marquee-separator">◆</span>
+            </div>
+            <div class="marquee-item">
+                <span class="marquee-icon">📍</span> San José de Chiquitos
+                <span class="marquee-separator">◆</span>
+            </div>
+            <div class="marquee-item">
+                <span class="marquee-icon">✔</span> Perfiles Verificados
+                <span class="marquee-separator">◆</span>
+            </div>
+            <!-- Duplicado para scroll infinito -->
+            <div class="marquee-item">
+                <span class="marquee-icon">⚡</span> Electricistas Certificados
+                <span class="marquee-separator">◆</span>
+            </div>
+            <div class="marquee-item">
+                <span class="marquee-icon">🚰</span> Plomeros de Confianza
+                <span class="marquee-separator">◆</span>
+            </div>
+            <div class="marquee-item">
+                <span class="marquee-icon">🪚</span> Carpintería Artesanal
+                <span class="marquee-separator">◆</span>
+            </div>
+            <div class="marquee-item">
+                <span class="marquee-icon">🍳</span> Gastronomía Regional
+                <span class="marquee-separator">◆</span>
+            </div>
+            <div class="marquee-item">
+                <span class="marquee-icon">🧱</span> Albañilería Profesional
+                <span class="marquee-separator">◆</span>
+            </div>
+            <div class="marquee-item">
+                <span class="marquee-icon">🔧</span> Mecánica Automotriz
+                <span class="marquee-separator">◆</span>
+            </div>
+            <div class="marquee-item">
+                <span class="marquee-icon">📍</span> San José de Chiquitos
+                <span class="marquee-separator">◆</span>
+            </div>
+            <div class="marquee-item">
+                <span class="marquee-icon">✔</span> Perfiles Verificados
+                <span class="marquee-separator">◆</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== MARQUESINA SECUNDARIA (dirección inversa) ===== -->
+    <div class="marquee-container-reverse">
+        <div class="marquee-track-reverse">
+            <div class="marquee-item-reverse">Bolsa Técnica Chiquitana</div>
+            <div class="marquee-item-reverse">•</div>
+            <div class="marquee-item-reverse">Conectando talento local</div>
+            <div class="marquee-item-reverse">•</div>
+            <div class="marquee-item-reverse">Servicios verificados en tu zona</div>
+            <div class="marquee-item-reverse">•</div>
+            <div class="marquee-item-reverse">Patrimonio Cultural UNESCO</div>
+            <div class="marquee-item-reverse">•</div>
+            <div class="marquee-item-reverse">San José de Chiquitos, Bolivia</div>
+            <div class="marquee-item-reverse">•</div>
+            <div class="marquee-item-reverse">Bolsa Técnica Chiquitana</div>
+            <div class="marquee-item-reverse">•</div>
+            <div class="marquee-item-reverse">Conectando talento local</div>
+            <div class="marquee-item-reverse">•</div>
+            <div class="marquee-item-reverse">Servicios verificados en tu zona</div>
+            <div class="marquee-item-reverse">•</div>
+            <div class="marquee-item-reverse">Patrimonio Cultural UNESCO</div>
+            <div class="marquee-item-reverse">•</div>
+            <div class="marquee-item-reverse">San José de Chiquitos, Bolivia</div>
+            <div class="marquee-item-reverse">•</div>
+        </div>
+    </div>
+
+    <main class="container">
+        <section class="hero fade-in-up">
+            <h1>Encuentra Técnicos y Oficiales Confiables en San José de Chiquitos</h1>
+            <p>Conectamos a vecinos, negocios y familias con carpinteros, electricistas, plomeros y cocineros calificados del municipio.</p>
+            <a href="perfiles.html" class="btn-primary">Ver Todos los Técnicos</a>
+        </section>
+
+        <section>
+            <h2>Explorar por Especialidad</h2>
+            <div class="grid-categories">
+                <a href="perfiles.html?cat=Electricidad" class="category-card fade-in-up">
+                    <span class="category-icon">⚡</span>
+                    <h3>Electricidad</h3>
+                </a>
+                <a href="perfiles.html?cat=Plomería" class="category-card fade-in-up">
+                    <span class="category-icon">🚰</span>
+                    <h3>Plomería</h3>
+                </a>
+                <a href="perfiles.html?cat=Carpintería" class="category-card fade-in-up">
+                    <span class="category-icon">🪚</span>
+                    <h3>Carpintería</h3>
+                </a>
+                <a href="perfiles.html?cat=Gastronomía" class="category-card fade-in-up">
+                    <span class="category-icon">🍳</span>
+                    <h3>Gastronomía</h3>
+                </a>
+                <a href="perfiles.html?cat=Albañilería" class="category-card fade-in-up">
+                    <span class="category-icon">🧱</span>
+                    <h3>Albañilería</h3>
+                </a>
+                <a href="perfiles.html?cat=Mecánica" class="category-card fade-in-up">
+                    <span class="category-icon">🔧</span>
+                    <h3>Mecánica</h3>
+                </a>
+            </div>
+        </section>
+
+        <section style="margin-top: 3rem;">
+            <h2>Técnicos Destacados en la Región</h2>
+            <div class="grid-workers" id="featured-workers">
+                <!-- Se carga dinámicamente mediante JS -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Plataforma Web de Intermediación Laboral | San José de Chiquitos - Bolivia</p>
+        <p><small>Proyecto Bachillerato Técnico Humanístico (BTH) - Sistemas Informáticos</small></p>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            renderFeaturedWorkers();
+            createParticles();
+        });
+
+        // Menú hamburguesa responsive
+        function toggleMenu() {
+            document.getElementById('main-nav').classList.toggle('open');
+        }
+
+        // Crear partículas decorativas
+        function createParticles() {
+            const container = document.getElementById('particles');
+            if (!container) return;
+            for (let i = 0; i < 20; i++) {
+                const p = document.createElement('div');
+                p.className = 'particle';
+                p.style.left = Math.random() * 100 + '%';
+                p.style.animationDuration = (8 + Math.random() * 15) + 's';
+                p.style.animationDelay = (Math.random() * 10) + 's';
+                p.style.width = (2 + Math.random() * 4) + 'px';
+                p.style.height = p.style.width;
+                p.style.opacity = 0.15 + Math.random() * 0.3;
+                container.appendChild(p);
+            }
+        }
+    </script>
+</body>
+</html>

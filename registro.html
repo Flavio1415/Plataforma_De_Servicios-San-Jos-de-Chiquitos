@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Trabajador Técnico</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <div class="particles" id="particles"></div>
+
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">⚙️ <span>Chiquitos</span>Técnicos</a>
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Menú">☰</button>
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="perfiles.html">Directorio</a></li>
+                    <li><a href="registro.html" class="active">Ofrecer Servicio</a></li>
+                    <li><a href="admin.html">Control Admin</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container" style="max-width: 620px;">
+        <h2>Registro de Hoja de Vida Técnica</h2>
+        <p style="color:rgba(248,250,252,0.75); margin-bottom:1.5rem;">Publica tus servicios en la plataforma digital. Sube tu foto para que los vecinos te reconozcan.</p>
+
+        <div class="glass-panel">
+            <form id="worker-form" onsubmit="submitWorkerForm(event)">
+                
+                <div class="form-group">
+                    <label>Nombre Completo:</label>
+                    <input type="text" id="name" class="form-control" required placeholder="Ej. Carlos Mamani">
+                </div>
+
+                <div class="form-group">
+                    <label>Especialidad Principal:</label>
+                    <select id="category" class="form-control" required>
+                        <option value="Electricidad">Electricidad</option>
+                        <option value="Plomería">Plomería</option>
+                        <option value="Carpintería">Carpintería</option>
+                        <option value="Gastronomía">Gastronomía</option>
+                        <option value="Albañilería">Albañilería</option>
+                        <option value="Mecánica">Mecánica</option>
+                    </select>
+                </div>
+
+                <div class="form-group" style="background: #F1F5F9; padding: 1rem; border-radius: 8px; border: 1px dashed var(--primary);">
+                    <label style="color: var(--primary-dark); font-size: 1.05rem;">📷 Foto de Perfil:</label>
+                    <input type="file" id="photo-file" class="form-control" accept="image/*" style="background: white; margin-top: 0.5rem;">
+                    <small style="color: #64748B; display: block; margin-top: 0.3rem;">Selecciona una foto desde tu celular o computadora (.jpg, .png).</small>
+                </div>
+
+                <div class="form-group">
+                    <label>Número de WhatsApp:</label>
+                    <input type="tel" id="phone" class="form-control" placeholder="Ej. 75012345" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Zona / Barrio de Atención (San José):</label>
+                    <input type="text" id="zone" class="form-control" placeholder="Ej. Barrio San Antonio / Centro" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Horarios de Atención:</label>
+                    <input type="text" id="schedule" class="form-control" placeholder="Ej. Lunes a Sábado: 08:00 - 18:00" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Experiencia y Descripción de Servicios:</label>
+                    <textarea id="experience" class="form-control" rows="4" placeholder="Detalla tus trabajos anteriores, años de experiencia..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-primary" style="width: 100%; font-size: 1.1rem; padding: 0.85rem;">
+                    Enviar Solicitud con mi Foto
+                </button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Plataforma Web de Intermediación Laboral | San José de Chiquitos</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            createParticles();
+        });
+
+        function toggleMenu() {
+            document.getElementById('main-nav').classList.toggle('open');
+        }
+
+        function createParticles() {
+            const container = document.getElementById('particles');
+            if (!container) return;
+            for (let i = 0; i < 12; i++) {
+                const p = document.createElement('div');
+                p.className = 'particle';
+                p.style.left = Math.random() * 100 + '%';
+                p.style.animationDuration = (8 + Math.random() * 15) + 's';
+                p.style.animationDelay = (Math.random() * 10) + 's';
+                p.style.width = (2 + Math.random() * 4) + 'px';
+                p.style.height = p.style.width;
+                p.style.opacity = 0.15 + Math.random() * 0.3;
+                container.appendChild(p);
+            }
+        }
+    </script>
+</body>
+</html>
